@@ -1,0 +1,405 @@
+/* HomePage.css */
+
+/* Top Navigation Bar */
+.top-bar {
+  background-color: #222;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  /* position: fixed; */
+  width: 100%;
+  z-index: 1000;
+  margin-top: 0px;
+}
+
+.contact-info span {
+  margin-right: 20px;
+}
+
+/* Main Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444;
+  padding: 10px;
+  /* position: fixed; */
+  margin-top: 0%;
+  width: 98.7%;
+  z-index: 1000;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin-right: 20px;}
+
+.nav-links li {
+  margin: 0 15px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  margin-right: 20px;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #666;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Content Section (Slider + Mission & Vision) */
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10%;
+  background-color: #f9f9f9;
+  margin-top: 70px;
+}
+
+.slider-container {
+  width: 50%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.video-frame-container {
+  flex: none;
+}
+
+.video-frame {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+.mission-vision {
+  width: 45%;
+  padding: 20px;
+}
+
+.mission-vision h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.mission-vision p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.achievement-grid {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%; /* Adjust the padding as needed */
+  background-color: #fff; /* Adjust the background color as needed */
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin to space it from other sections */
+}
+
+.achievement {
+  flex: 1;
+  margin: 0 10px; /* Adjust the margin to space out the items */
+}
+
+.achievement h2 {
+  font-size: 1.5rem; /* Adjust the font size for the headings */
+  margin-bottom: 0.5rem; /* Adjust the space between heading and paragraph */
+  color: #000; /* Adjust the text color */
+}
+
+.achievement p {
+  font-size: 1rem; /* Adjust the font size for the subheading */
+  color: #666; /* Adjust the text color */
+}
+
+
+/* Qualification Section */
+.qualification {
+  background-color: #f0f0f0;
+  padding: 50px 10%;
+  text-align: left;
+}
+
+.qualification h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.qualification p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Research Section */
+.research {
+  background-color: #e9e9e9;
+  padding: 50px 10%;
+  text-align: left;
+}
+
+.research h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.research h3 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.research p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.research a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.research a:hover {
+  text-decoration: underline;
+}
+
+/* Study Plans Section */
+.study-plans {
+  background-color: #d9f9d9;
+  padding: 50px 10%;
+  text-align: left;
+}
+
+.study-plans h2 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.study-plans-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.study-plan {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.study-plan h3 {
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.study-plan p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.checkmark {
+  color: green;
+  margin-right: 10px;
+}
+
+/* Pricing Section */
+.pricing {
+  background-color: #f5e9d9;
+  padding: 50px 10%;
+  text-align: left;
+}
+
+.pricing h2 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pricing-plan {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.pricing-plan h3 {
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.pricing-plan p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* About Section */
+.about {
+  background-color: #f8f9fa;
+  padding: 50px 20px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-item {
+  background-color: #fff;
+  padding: 183px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+.about-item2 {
+  background-color: #fff;
+  padding: 186.4px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+.about-item3 {
+  background-color: #fff;
+  padding: 183px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-image {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* FAQs Section */
+.faqs {
+  background-color: #f9f9f9;
+  padding: 50px 10%;
+  text-align: left;
+}
+
+.faqs h2 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question span {
+  font-size: 18px;
+  color: #333;
+}
+
+.faq-answer {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
