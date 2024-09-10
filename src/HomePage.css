@@ -25,7 +25,89 @@
   align-items: center;
   background-color: #444;
   padding: 10px;
-  /* position: fixed; */
+  position: fixed;
+  top: 0.3;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #666;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Free Trial Button */
+.freetrial-btn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.freetrial-btn:hover {
+  background-color: blue;
+  border-color: blue;
+}
+
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444;
+  padding: 10px;
   margin-top: 0%;
   width: 98.7%;
   z-index: 1000;
@@ -58,7 +140,6 @@
   color: #ccc;
 }
 
-/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -82,7 +163,7 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 /* Content Section (Slider + Mission & Vision) */
 .content-section {

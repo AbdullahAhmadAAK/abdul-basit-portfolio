@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './HomePage.css'; // Ensure you have this CSS file
-import logoimage from './logopics/High Regulation/Work 1 black.jpg';
+import logoimage from './logopics/High Regulation/Work 1.jpg';
 import aboutPic1 from './IMG_20240203_211219.jpg';
 import aboutPic2 from './IMG_20240203_211317.jpg';
 import aboutPic3 from './WhatsApp Image 2024-05-17 at 14.53.52.jpeg.jpg';
@@ -16,8 +16,7 @@ const HomePage = () => {
 
     const videos = [
         "https://www.youtube.com/embed/d8gqXgLzSDk?si=v9Y1p7H9TEAOjYXC",
-        "https://www.youtube.com/embed/VwSFpOGAwKg?si=GmEegiiwDJAJqBv1",
-        "https://www.youtube.com/embed/your_video_id_3"
+        "https://www.youtube.com/embed/VwSFpOGAwKg?si=GmEegiiwDJAJqBv1"
         // Add more video URLs as needed
     ];
 
@@ -47,6 +46,31 @@ const HomePage = () => {
 
             {/* Main Navigation Bar */}
             <nav className="navbar">
+                <img className="logo" src={logoimage} alt="Logo" />
+                <ul className="nav-links">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#study-plans">Study Plans</a></li>
+                    <li><a href="#qualification">Qualification</a></li>
+                    <li><a href="#faqs">FAQ's</a></li>
+                    <li className="dropdown">
+                        <button className="dropbtn">Sections</button>
+                        <div className="dropdown-content">
+                            <a href="#testimonials">Testimonials</a>
+                            <a href="#pricing">Pricing</a>
+                            <a href="#contact">Contact us</a>
+                        </div>
+                    </li>
+                    <li className="dropdown">
+                        <button className="dropbtn">More</button>
+                        <div className="dropdown-content">
+                            <a href="#about">About</a>
+                            <a href="#research">Research Experience</a>
+                        </div>
+                    </li>
+                    <li><a href="#free-trial" className="freetrial-btn">Free Trial</a></li>
+                </ul>
+            </nav>
+            {/* <nav className="navbar">
                 <img className='logo' src={logoimage} alt="Logo" />
                 <ul className="nav-links">
                     <li><a href="#top">Home</a></li>
@@ -70,7 +94,7 @@ const HomePage = () => {
                     </li>
                     <li className='freetrial'><a href="https://wa.me/message/CASFE6CD3FVQI1">Free Trial</a></li>
                 </ul>
-            </nav>
+            </nav> */}
             {/* Content Section (Slider + Mission & Vision) */}
             <section id="content-section" className="content-section">
                 <div className="slider-container">
