@@ -8,10 +8,11 @@
   text-align: center;
   font-size: 14px;
   font-family: Arial, sans-serif;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   z-index: 1000;
-  margin-top: 0px;
+  /* margin-top: 0px; */
+  top: 0;
 }
 
 .contact-info span {
@@ -26,7 +27,7 @@
   background-color: #444;
   padding: 10px;
   position: fixed;
-  top: 0.3;
+  top: 30px;
   width: 100%;
   z-index: 1000;
 }
@@ -217,67 +218,116 @@
   padding: 20px 10%; /* Adjust the padding as needed */
   background-color: #fff; /* Adjust the background color as needed */
   text-align: center;
-  margin-top: 20px; /* Adjust the margin to space it from other sections */
+  margin-top: 0px; /* Adjust the margin to space it from other sections */
 }
 
 .achievement {
   flex: 1;
   margin: 0 10px; /* Adjust the margin to space out the items */
+  position: relative; /* Needed for the ::after pseudo-element */
 }
 
 .achievement h2 {
-  font-size: 1.5rem; /* Adjust the font size for the headings */
+  font-size: 2rem; /* Adjust the font size for the headings */
   margin-bottom: 0.5rem; /* Adjust the space between heading and paragraph */
   color: #000; /* Adjust the text color */
 }
 
 .achievement p {
-  font-size: 1rem; /* Adjust the font size for the subheading */
+  font-size: 1.5rem; /* Adjust the font size for the subheading */
   color: #666; /* Adjust the text color */
 }
+
+/* Add '|' lines between achievements */
+.achievement:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -15px; /* Positioning the '|' line */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 120px; /* Size of the '|' line */
+  color: #000; /* Adjust the color of the '|' line */
+}
+
+
+/* .achievement-grid {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%; 
+  background-color: #fff; 
+  text-align: center;
+  margin-top: 20px; 
+}
+
+.achievement {
+  flex: 1;
+  margin: 0 10px; 
+}
+
+.achievement h2 {
+  font-size: 1.5rem; 
+  margin-bottom: 0.5rem; 
+  color: #000; 
+}
+
+.achievement p {
+  font-size: 1rem; 
+  color: #666; 
+} */
 
 
 /* Qualification Section */
 .qualification {
-  background-color: #f0f0f0;
+  background-color: #230e79;
   padding: 50px 10%;
   text-align: left;
 }
 
+.gradpic {
+  /* background-color: #fff; */
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px; */
+  /* overflow: hidden; */
+  /* box-shadow: 0px 4px 8px rgba(0,0,0,0.1); */
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+
 .qualification h1 {
   font-size: 36px;
-  color: #333;
+  color: #e1ffff;
   margin-bottom: 20px;
 }
 
 .qualification p {
   font-size: 18px;
-  color: #666;
+  color: #e1ffff;
   margin-bottom: 10px;
 }
 
 /* Research Section */
 .research {
-  background-color: #e9e9e9;
-  padding: 50px 10%;
+  background-color: #e1ffff;
+  padding: 10px 10%;
   text-align: left;
 }
 
 .research h1 {
   font-size: 36px;
-  color: #333;
+  color: #230e79;
   margin-bottom: 20px;
 }
 
 .research h3 {
   font-size: 24px;
-  color: #444;
+  color: #230e79;
   margin-bottom: 10px;
 }
 
 .research p {
   font-size: 18px;
-  color: #666;
+  color: #230e79;
   margin-bottom: 10px;
 }
 
@@ -292,14 +342,14 @@
 
 /* Study Plans Section */
 .study-plans {
-  background-color: #d9f9d9;
+  background-color: #0f1976;
   padding: 50px 10%;
   text-align: left;
 }
 
 .study-plans h2 {
   font-size: 30px;
-  color: #333;
+  color: #ddfaff;
   margin-bottom: 20px;
 }
 
@@ -377,6 +427,75 @@
   padding: 50px 20px;
 }
 
+.about h1 {
+  font-size: 30px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.about-image {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.about-item {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.about-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* .about {
+  background-color: #f8f9fa;
+  padding: 50px 20px;
+}
+
 .about-container {
   display: flex;
   justify-content: space-between;
@@ -440,7 +559,7 @@
   width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 
 /* FAQs Section */

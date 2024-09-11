@@ -4,11 +4,15 @@ import logoimage from './logopics/High Regulation/Work 1.jpg';
 import aboutPic1 from './IMG_20240203_211219.jpg';
 import aboutPic2 from './IMG_20240203_211317.jpg';
 import aboutPic3 from './WhatsApp Image 2024-05-17 at 14.53.52.jpeg.jpg';
+import gradpic from './IMG_1383.JPG';
 
 const HomePage = () => {
     const [activeFAQ, setActiveFAQ] = useState(null);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
+    const [currentTime, setCurrentTime] = useState(new Date());
+    const [timeZone, setTimeZone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
+
 
     const toggleFAQ = (index) => {
         setActiveFAQ(activeFAQ === index ? null : index);
@@ -29,6 +33,14 @@ const HomePage = () => {
         }
     }, [isPaused, videos.length]);
 
+    useEffect(() => {
+        const timeInterval = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 1000); // Update the time every second
+
+        return () => clearInterval(timeInterval); // Cleanup interval on component unmount
+    }, []);
+
     const handleVideoClick = () => {
         setIsPaused(true); // Pause the slider when a video is clicked
     };
@@ -40,7 +52,9 @@ const HomePage = () => {
                 <div className="contact-info">
                     <span>📞 +92 328 5399335</span>
                     <span>✉️ pa@abdulbasitpawar.com</span>
-                    <span>🕒 Time Zone: PST</span>
+                    {/* <span>🕒 Time Zone: PST</span> */}
+                    <span>🕒 Time Zone: {timeZone}</span>
+                    <span>⏰ {currentTime.toLocaleTimeString()}</span>
                 </div>
             </div>
 
@@ -164,6 +178,9 @@ const HomePage = () => {
             
             {/* Home Section */}
             <section id="qualification" className='qualification'>
+                <div className='gradpic'>
+                    <img src={gradpic} alt="qual 1" />
+                </div>
                 <h1>Qualification</h1>
                 <p>BSc (Hons)</p>
                 <p>Department of Mathematics: Emerging Regional Center of Excellence</p>
@@ -220,6 +237,37 @@ const HomePage = () => {
             <section id="about" className='about'>
                 <h1>About</h1>
                 <div className="about-container">
+                    <div className="about-images">
+                        <div className="about-image">
+                            <img src={aboutPic1} alt="About 1" />
+                        </div>
+                        <div className="about-image">
+                            <img src={aboutPic2} alt="About 2" />
+                        </div>
+                        <div className="about-image">
+                            <img src={aboutPic3} alt="About 3" />
+                        </div>
+                    </div>
+                    <div className="about-text">
+                        <div className="about-item">
+                            <h3>The person</h3>
+                            <p>Abdul Basit Pawar is a renowned mathematics tutor for preparation of GRE (Quan), SAT (Math section) and undergraduate math courses. Born on August 06, 2002, in Gujranwala, he has become a top-rated tutor both among local and international students. His journey to success is marked by perseverance, passion, and a deep understanding of mathematics.</p>
+                        </div>
+                        <div className="about-item">
+                            <h3>The Journey</h3>
+                            <p>Abdul Basit's journey is a unique one, taking him from the world of entrepreneurship to help students as a tutor. He is the Co-founder of bikechaiye.com, the pioneering fuel bike rental service for university students and Yodobikes.com, the only electric scooter sharing service in Pakistan. Despite achieving entrepreneurial acclaim initially, Abdul Basit felt a calling to pursue a path that allowed him to help students.</p>
+                        </div>
+                        <div className="about-item">
+                            <h3>The Transition</h3>
+                            <p>AbdulBasit's transition from entrepreneur to math tutor stemmed from a desire to devote himself for mathematics. He began by assisting more than a thousand students at LUMS Math Circles, drawing on his own experiences and challenges to connect with students. He then started working as a private tutor for mathematics and enjoying it till today. His relatable approach and simple language made him students’ favourite.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* <section id="about" className='about'>
+                <h1>About</h1>
+                <div className="about-container">
                     <div className="about-text">
                         <div className="about-item">
                             <h3>The person</h3>
@@ -246,7 +294,7 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* FAQs Section */}
             <section id="faqs" className='faqs'>
