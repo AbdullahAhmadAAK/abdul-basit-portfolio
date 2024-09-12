@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './HomePage.css'; // Ensure you have this CSS file
-import logoimage from './logopics/High Regulation/Work 1.jpg';
+import logoimage from './logopics/High Regulation/WhatsApp Image 2024-09-11 at 21.10.54_0c6c54ba.jpg';
 import aboutPic1 from './IMG_20240203_211219.jpg';
 import aboutPic2 from './IMG_20240203_211317.jpg';
 import aboutPic3 from './WhatsApp Image 2024-05-17 at 14.53.52.jpeg.jpg';
@@ -19,8 +19,8 @@ const HomePage = () => {
     };
 
     const videos = [
-        "https://www.youtube.com/embed/d8gqXgLzSDk?si=v9Y1p7H9TEAOjYXC",
-        "https://www.youtube.com/embed/VwSFpOGAwKg?si=GmEegiiwDJAJqBv1"
+        "https://www.youtube.com/embed/VwSFpOGAwKg?si=GmEegiiwDJAJqBv1",
+        "https://www.youtube.com/embed/d8gqXgLzSDk?si=v9Y1p7H9TEAOjYXC"
         // Add more video URLs as needed
     ];
 

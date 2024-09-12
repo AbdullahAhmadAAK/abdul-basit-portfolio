@@ -25,7 +25,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #444;
-  padding: 10px;
+  padding: 0px;
   position: fixed;
   top: 30px;
   width: 100%;
@@ -33,7 +33,7 @@
 }
 
 .logo {
-  height: 50px;
+  height: 70px;
 }
 
 .nav-links {
@@ -172,21 +172,24 @@
   justify-content: space-between;
   padding: 50px 10%;
   background-color: #f9f9f9;
-  margin-top: 70px;
+  margin-top: 90px;
 }
 
 .slider-container {
   width: 50%;
   overflow: hidden;
+  margin-top: 40px;
 }
 
 .slider {
   display: flex;
   transition: transform 0.5s ease;
+  width: 200%;
 }
 
 .video-frame-container {
   flex: none;
+  width: 100%;
 }
 
 .video-frame {
@@ -197,7 +200,7 @@
 
 .mission-vision {
   width: 45%;
-  padding: 20px;
+  /* padding: 0px; */
 }
 
 .mission-vision h2 {
