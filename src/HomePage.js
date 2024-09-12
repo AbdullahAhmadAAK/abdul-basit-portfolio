@@ -230,7 +230,9 @@ const HomePage = () => {
                         <p>monthly fees is USD 250 (foundation) & USD 325 (mastery)</p>
                     </div>
                 </div>
-                <p>Note: These prices have been stated on 1st September 2024. For updated prices, please WhatsApp us at +92-328-5399335.</p>
+                <div className='pricingnote'>
+                    <p>Note: These prices have been stated on 1st September 2024. For updated prices, please WhatsApp us at +92-328-5399335.</p>
+                </div>
             </section>
 
             {/* About Section */}
@@ -339,6 +341,7 @@ const HomePage = () => {
                 <div className='eplogo'>
                     <img src={logoimage} alt="Eop 1" />
                 </div>
+
             </section>
         </div>
     );
