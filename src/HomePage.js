@@ -333,6 +333,13 @@ const HomePage = () => {
                     )}
                 </div>
             </section>
+
+            {/* End of page section */}
+            <section id='endofpage' className='endofpagesection'>
+                <div className='eplogo'>
+                    <img src={logoimage} alt="Eop 1" />
+                </div>
+            </section>
         </div>
     );
 };
