@@ -5,6 +5,12 @@ import aboutPic1 from './IMG_20240203_211219.jpg';
 import aboutPic2 from './IMG_20240203_211317.jpg';
 import aboutPic3 from './WhatsApp Image 2024-05-17 at 14.53.52.jpeg.jpg';
 import gradpic from './IMG_1383.JPG';
+import eoppic from './logopics/High Regulation/Work 1..png';
+import fbpic from './logopics/High Regulation/fbpic.png';
+import instapic from './logopics/High Regulation/instapic.jpeg';
+import linkedinpic from './logopics/High Regulation/linkedinpic.png';
+import youtubepic from './logopics/High Regulation/youtubepic.jpeg';
+import twitterpic from './logopics/High Regulation/twitterpic.png';
 
 const HomePage = () => {
     const [activeFAQ, setActiveFAQ] = useState(null);
@@ -339,9 +345,32 @@ const HomePage = () => {
             {/* End of page section */}
             <section id='endofpage' className='endofpagesection'>
                 <div className='eplogo'>
-                    <img src={logoimage} alt="Eop 1" />
+                    <img src={eoppic} alt="Eop 1" />
                 </div>
-
+                <div className='epfb'>
+                    <img src={fbpic} alt="Eop 2" />
+                </div>
+                <div className='epinsta'>
+                    <img src={instapic} alt="Eop 3" />
+                </div>
+                <div className='eptwitter'>
+                    <img src={twitterpic} alt="Eop 4" />
+                </div>
+                <div className='epyoutube'>
+                    <img src={youtubepic} alt="Eop 5" />
+                </div>
+                <div className='eplinkedin'>
+                    <img src={linkedinpic} alt="Eop 6" />
+                </div>
+                <a className='eophome' href="#top">Home</a>
+                <a className='eopstudy' href="#study-plans">Study Plans</a>
+                <a className='eoppricing' href="#pricing">Pricing</a>
+                <a className='eopfaqs' href="#faqs">FAQ's</a>
+                <a className='eopcontact' href="#contact">Contact us</a>
+                <a className='eoptestimonials' href="#testimonials">Testimonials</a>
+                <a className='eopabout' href="#about">About</a>
+                <a className='eopqualification' href="#qualification">Qualification</a>
+                <a className='eopresearch' href="#research">Research Experience</a>
             </section>
         </div>
     );
