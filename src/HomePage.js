@@ -11,6 +11,7 @@ import instapic from './logopics/High Regulation/instapic.jpeg';
 import linkedinpic from './logopics/High Regulation/linkedinpic.png';
 import youtubepic from './logopics/High Regulation/youtubepic.jpeg';
 import twitterpic from './logopics/High Regulation/twitterpic.png';
+import VideoCarousel from './VideoCarousel';
 
 const HomePage = () => {
     const [activeFAQ, setActiveFAQ] = useState(null);
@@ -117,7 +118,7 @@ const HomePage = () => {
             </nav> */}
             {/* Content Section (Slider + Mission & Vision) */}
             <section id="content-section" className="content-section">
-                <div className="slider-container">
+                {/* <div className="slider-container">
                     <div 
                         className="slider" 
                         style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${videos.length * 100}%` }}
@@ -136,7 +137,8 @@ const HomePage = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
+                <VideoCarousel/>
                 <div className="mission-vision">
                     <h2>My Mission</h2>
                     <p>My mission is to provide a 
